@@ -23,7 +23,7 @@ const Body=()=>{
         </div>
         <div className="  flex flex-wrap gap-10 justify-center mt-6">
             {countryData?.map((country)=>{
-               return <Link to={`/country/${country.name.common}`}><CountryCard data={country} key={country?.flags?.png}/></Link>
+               return <Link to={`/country/${country.name.common}`} state={{country:country}} ><CountryCard data={country} key={country?.flags?.png}/></Link>
             })}
         </div>
         </div>

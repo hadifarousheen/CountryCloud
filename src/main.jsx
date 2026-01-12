@@ -3,7 +3,9 @@ import { createRoot } from 'react-dom/client'
 import App from './App.jsx'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Body from './components/Body.jsx'
-import CountryContext from './utils/CountyContext.js'
+
+
+
 
 const appRouter=createBrowserRouter([{
   path:"/",
@@ -16,10 +18,10 @@ const appRouter=createBrowserRouter([{
 }])
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <CountryContext.Provider>
+   
     <RouterProvider router={appRouter}>
     <App />
     </RouterProvider>
-    </CountryContext.Provider>
+
   </StrictMode>,
 )

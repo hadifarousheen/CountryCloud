@@ -8,23 +8,23 @@ import CountryDetails from './components/CountryDetails.jsx'
 
 
 
-const appRouter=createBrowserRouter([{
-  path:"/",
-  element:<App/>,
-  children:[{
-    index:true,
-  path:"/",
-  element:<Body/>
-},{
-  path:"/country/:countryName",
-  element:<CountryDetails/>
-}]
+const appRouter = createBrowserRouter([{
+  path: "/",
+  element: <App />,
+  children: [{
+    index: true,
+    path: "/",
+    element: <Body />
+  }, {
+    path: "/country/:countryName",
+    element: <CountryDetails />
+  }]
 }])
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-   
+
     <RouterProvider router={appRouter}>
-    <App />
+      <App />
     </RouterProvider>
 
   </StrictMode>,

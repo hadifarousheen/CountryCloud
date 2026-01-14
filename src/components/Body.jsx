@@ -9,7 +9,7 @@ const Body=()=>{
     return(
         <div className="pt-6 bg-gray-300">
         <div className="flex justify-center">
-            <input type="text" value={searchCountry} className="border w-1/3 px-1 font-black border-2" onChange={(e)=>{
+            <input type="text" value={searchCountry} className="w-1/3 px-1 font-black border-2" onChange={(e)=>{
                 setSearchCountry(e.target.value)
             }}/>
             <button className=" px-2 ml-2 rounded-lg font-bold shadow-md bg-amber-300" onClick={()=>{

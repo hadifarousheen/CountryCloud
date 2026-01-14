@@ -2,10 +2,8 @@ import { useLocation } from 'react-router-dom'
 const CountryDetails=()=>{
       const location = useLocation();
       const country = location.state?.country;
-      console.log(country)
     return(
         <div className='w-3/4 flex ml-auto mr-auto    mt-8 bg-gray-300'>
-           {/* <div className='flex justify-center'> */}
                 <div className='w-fit '>
             <img src={country?.flags.png} className='h-fit w-3xl'/>
             </div>
@@ -16,9 +14,7 @@ const CountryDetails=()=>{
             <h2 className='text-lg'><span className='font-bold'>Common Native Name :</span> {country?.name?.nativeName?.dzo?.common}</h2>
             <h2 className='text-lg'><span className='font-bold'>Official Native Name : </span>{country?.name?.nativeName?.dzo?.official}</h2>
             </div>
-            </div>
-            // </div>
-            
+            </div>            
     )
 }
 export default CountryDetails;

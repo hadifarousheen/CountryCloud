@@ -8,6 +8,7 @@ import { useEffect, useState } from "react"
 function App() {
   const [countryData, setCountryData] = useState(null);
   const [fixedCountryData, setFixedCountryData] = useState(null);
+  const[showHome,setShowHome]=useState(false);
   useEffect(() => {
     const getCountryData = async () => {
       const data = await fetch("https://restcountries.com/v3.1/all?fields=name,flags");
@@ -19,7 +20,9 @@ function App() {
   }, [])
   return (
     <>
-      <CountryContext.Provider value={{ countryData, setCountryData, fixedCountryData, setFixedCountryData }}>
+      <CountryContext.Provider value={{ countryData, setCountryData, fixedCountryData, setFixedCountryData,showHome
+        ,setShowHome
+       }}>
         <Header />
         <Outlet />
       </CountryContext.Provider>
